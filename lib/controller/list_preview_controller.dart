@@ -3,14 +3,13 @@ import 'package:api_list_demo_wellorgs/services/api_services.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
-
 class ListPreviewController extends GetxController {
   var isLoading = true.obs;
   var userList = <ResponseModel>[].obs;
   var filteredList = <ResponseModel>[].obs;
   var searchQuery = ''.obs;
   var errorMessage = ''.obs;
-  final TextEditingController searchController = TextEditingController();
+
 
   @override
   void onInit() {
@@ -32,8 +31,8 @@ class ListPreviewController extends GetxController {
     }
   }
 
-  // void updateUserList() {
-  //   userList.refresh();
-  //   update();
-  // }
+// void updateUserList() {
+//   userList.refresh();
+//   update();
+// }
 }

@@ -1,3 +1,4 @@
+import 'package:api_list_demo_wellorgs/view/user_details_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -36,7 +37,7 @@ class ListPreviewScreen extends StatelessWidget {
         body: Obx(() {
           if (listPreviewController.isLoading.value) {
             return const Center(
-              child: CircularProgressIndicator(color: Colors.white),
+              child: CircularProgressIndicator(color: Colors.blue),
             );
           } else if (listPreviewController.errorMessage.isNotEmpty) {
             return Center(
@@ -67,7 +68,7 @@ class ListPreviewScreen extends StatelessWidget {
                     style:   TextStyle(color: Colors.grey.shade700),
                   ),
                   onTap: () {
-                    // Navigate to details screen
+                    Get.to(UserDetailsScreen(user: user));
                   },
                 );
               },

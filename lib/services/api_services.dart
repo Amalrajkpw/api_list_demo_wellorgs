@@ -19,12 +19,10 @@ class ApiServices {
         var users =
             jsonData.map((user) => ResponseModel.fromJson(user)).toList();
         listPreviewController.userList.value = users;
-        // print(listPreviewController.userList.toString());
-        // print(response.body.toString());
-        //   listPreviewController.updateUserList();
       } else {
         listPreviewController.errorMessage.value = 'Failed to load users';
-        Get.snackbar(listPreviewController.errorMessage.value, "error occurred");
+        Get.snackbar(
+            listPreviewController.errorMessage.value, "error occurred");
       }
     } catch (e) {
       listPreviewController.errorMessage.value = e.toString();
