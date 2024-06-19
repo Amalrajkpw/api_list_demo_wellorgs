@@ -1,4 +1,6 @@
- import 'package:flutter/cupertino.dart';
+ import 'package:api_list_demo_wellorgs/view/list_preview_screen.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:get/get.dart';
 
 void main(){
   runApp(const ApiDemo());
@@ -8,7 +10,11 @@ void main(){
  
    @override
    Widget build(BuildContext context) {
-     return const Placeholder();
+     return GetMaterialApp(
+       debugShowCheckedModeBanner: false,
+       home: ListPreviewScreen(),
+
+     );
    }
  }
  
